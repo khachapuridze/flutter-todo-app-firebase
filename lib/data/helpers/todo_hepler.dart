@@ -30,7 +30,7 @@ class TodoHelper {
 
   static Future<void> deleteItem({required String docID}) async {
     DocumentReference documentReference =
-        _collectionReference.doc(userID).collection('items').doc(docID);
+        _collectionReference.doc(userID).collection('todos').doc(docID);
     await documentReference
         .delete()
         .whenComplete(() => print('data deleted !!!'))
